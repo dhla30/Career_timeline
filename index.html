@@ -3,179 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Career Timeline</title>
-    <!-- Adding Font Awesome for Icons -->
+    <title>Career Timeline</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Adding custom styles -->
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #f4f4f4;
         }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
         .timeline {
+            width: 80%;
+            margin: 50px auto;
             position: relative;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding-left: 20px;
         }
-
-        .timeline::after {
-            content: '';
+        .event {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .event .icon {
+            font-size: 30px;
+            margin-right: 20px;
+        }
+        .event .details {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .event .details h3 {
+            margin-top: 0;
+        }
+        .event .details p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .event .details span {
+            font-weight: bold;
+            color: #3a3a3a;
+        }
+        .line {
             position: absolute;
-            width: 6px;
-            background-color: #ddd;
+            left: 15%;
+            width: 2px;
+            background-color: #007bff;
             top: 0;
             bottom: 0;
-            left: 50%;
-            margin-left: -3px;
+            z-index: -1;
         }
-
-        .timeline-item {
-            display: flex;
-            margin: 20px 0;
-            position: relative;
-            width: 50%;
-            padding-left: 80px;
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 50px;
         }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #ff5733;
-            left: -10px;
-            top: 10px;
-            box-shadow: 0 0 0 5px white;
-        }
-
-        .icon {
-            font-size: 24px;
-            color: #ff5733;
-            position: absolute;
-            left: -60px;
-            top: 10px;
-        }
-
-        .content {
-            padding: 10px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 85%;
-        }
-
-        .content h3 {
-            margin: 0;
-            color: #333;
-        }
-
-        .content p {
-            color: #555;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 50%;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 0;
-        }
-
-        @media (max-width: 768px) {
-            .timeline::after {
-                left: 31px;
-            }
-
-            .timeline-item {
-                width: 100%;
-                padding-left: 30px;
-            }
-
-            .timeline-item:nth-child(odd) {
-                left: 0%;
-            }
-
-            .timeline-item:nth-child(even) {
-                left: 0%;
-            }
+        .timeline-header h1 {
+            font-size: 2.5em;
         }
     </style>
 </head>
 <body>
 
-    <header>
+    <div class="timeline-header">
         <h1>My Career Timeline</h1>
-    </header>
+    </div>
 
-    <section class="timeline">
-        <!-- Event 1: Graduation -->
-        <div class="timeline-item">
+    <div class="timeline">
+        <div class="line"></div>
+        <div class="event" style="top: 0;">
             <div class="icon">
                 <i class="fas fa-graduation-cap"></i> <!-- Graduation Icon -->
             </div>
-            <div class="content">
-                <h3>2020 - Graduated</h3>
-                <p>Graduated with a B.Tech in Computer Science from GITAM University.</p>
+            <div class="details">
+                <h3>Graduated with B.Tech</h3>
+                <p><span>Year:</span> 2020</p>
+                <p><span>Event:</span> Completed B.Tech at GITAM University</p>
             </div>
         </div>
 
-        <!-- Event 2: Research Intern at IIT Bhilai -->
-        <div class="timeline-item">
+        <div class="event" style="top: 100px;">
+            <div class="icon">
+                <i class="fas fa-laptop-code"></i> <!-- Internship Icon -->
+            </div>
+            <div class="details">
+                <h3>Internship at Red Solar</h3>
+                <p><span>Year:</span> 2021</p>
+                <p><span>Event:</span> Internship focused on renewable energy systems.</p>
+            </div>
+        </div>
+
+        <div class="event" style="top: 200px;">
             <div class="icon">
                 <i class="fas fa-flask"></i> <!-- Research Icon -->
             </div>
-            <div class="content">
-                <h3>2021 - Research Intern at IIT Bhilai</h3>
-                <p>Worked as a research intern focusing on AI and Machine Learning under the supervision of esteemed professors.</p>
+            <div class="details">
+                <h3>Research Internship (IIT Bhilai)</h3>
+                <p><span>Year:</span> 2021</p>
+                <p><span>Event:</span> Worked on research related to sustainable energy solutions.</p>
             </div>
         </div>
 
-        <!-- Event 3: Research Assistant at IIT Palakkad -->
-        <div class="timeline-item">
+        <div class="event" style="top: 300px;">
             <div class="icon">
                 <i class="fas fa-flask"></i> <!-- Research Icon -->
             </div>
-            <div class="content">
-                <h3>2022 - Research Assistant at IIT Palakkad</h3>
-                <p>Assisted in various research projects, primarily focusing on data analytics and optimization techniques.</p>
+            <div class="details">
+                <h3>Research Assistant (IIT Palakkad)</h3>
+                <p><span>Year:</span> 2022</p>
+                <p><span>Event:</span> Contributed to a project on advanced computational models.</p>
             </div>
         </div>
 
-        <!-- Event 4: Research Intern at IIIT Nagpur -->
-        <div class="timeline-item">
-            <div class="icon">
-                <i class="fas fa-laptop-code"></i> <!-- Laptop/Technology Icon -->
-            </div>
-            <div class="content">
-                <h3>2023 - Research Intern at IIIT Nagpur</h3>
-                <p>Contributed to research in data-driven models and software development in the field of computational sciences.</p>
-            </div>
-        </div>
-
-        <!-- Event 5: Research Assistant at IIT Ropar -->
-        <div class="timeline-item">
+        <div class="event" style="top: 400px;">
             <div class="icon">
                 <i class="fas fa-flask"></i> <!-- Research Icon -->
             </div>
-            <div class="content">
-                <h3>2024 - Research Assistant at IIT Ropar</h3>
-                <p>Currently working as a research assistant, developing new methods in AI and optimizing machine learning algorithms.</p>
+            <div class="details">
+                <h3>Research Internship (IIIT Nagpur)</h3>
+                <p><span>Year:</span> 2023</p>
+                <p><span>Event:</span> Worked on research in AI and machine learning applications.</p>
             </div>
         </div>
-    </section>
+    </div>
 
 </body>
 </html>
