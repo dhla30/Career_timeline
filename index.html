@@ -4,130 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Career Timeline</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            text-align: center;
         }
-        .timeline {
+        .timeline-container {
             width: 80%;
             margin: 50px auto;
             position: relative;
         }
-        .event {
+        .timeline {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
             position: relative;
+            width: 100%;
+            padding: 20px 0;
         }
-        .event .icon {
-            font-size: 30px;
-            margin-right: 20px;
-        }
-        .event .details {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            width: 80%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .event .details h3 {
-            margin-top: 0;
-        }
-        .line {
+        .timeline::before {
+            content: "";
             position: absolute;
-            left: 15%;
-            width: 2px;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
             background-color: #007bff;
-            top: 0;
-            bottom: 0;
             z-index: -1;
         }
-        .timeline-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .timeline-header h1 {
-            font-size: 2.5em;
+        .year {
+            background-color: #fff;
+            padding: 10px 15px;
+            border-radius: 50%;
+            border: 3px solid #007bff;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <div class="timeline-header">
-        <h1>My Career Timeline</h1>
-    </div>
-
-    <div class="timeline">
-        <div class="line"></div>
-        
-        <!-- Event 1 -->
-        <div class="event" style="top: 0;">
-            <div class="icon">
-                <i class="fas fa-graduation-cap"></i> <!-- Graduation Icon -->
-            </div>
-            <div class="details">
-                <h3>Graduated with B.Tech</h3>
-                <p><span>Year:</span> 2020</p>
-            </div>
-        </div>
-
-        <!-- Event 2 -->
-        <div class="event" style="top: 100px;">
-            <div class="icon">
-                <i class="fas fa-laptop-code"></i> <!-- Internship Icon -->
-            </div>
-            <div class="details">
-                <h3>Internship at Red Solar</h3>
-                <p><span>Year:</span> 2021</p>
-            </div>
-        </div>
-
-        <!-- Event 3 -->
-        <div class="event" style="top: 200px;">
-            <div class="icon">
-                <i class="fas fa-flask"></i> <!-- Research Icon -->
-            </div>
-            <div class="details">
-                <h3>Research Internship (IIT Bhilai)</h3>
-                <p><span>Year:</span> 2021</p>
-            </div>
-        </div>
-
-        <!-- Event 4 -->
-        <div class="event" style="top: 300px;">
-            <div class="icon">
-                <i class="fas fa-flask"></i> <!-- Research Icon -->
-            </div>
-            <div class="details">
-                <h3>Research Assistant (IIT Palakkad)</h3>
-                <p><span>Year:</span> 2022</p>
-            </div>
-        </div>
-
-        <!-- Event 5 -->
-        <div class="event" style="top: 400px;">
-            <div class="icon">
-                <i class="fas fa-flask"></i> <!-- Research Icon -->
-            </div>
-            <div class="details">
-                <h3>Research Internship (IIIT Nagpur)</h3>
-                <p><span>Year:</span> 2023</p>
-            </div>
-        </div>
-
-        <!-- Event 6 -->
-        <div class="event" style="top: 500px;">
-            <div class="icon">
-                <i class="fas fa-flask"></i> <!-- Research Icon -->
-            </div>
-            <div class="details">
-                <h3>Research Assistant (IIT Ropar)</h3>
-                <p><span>Year:</span> 2024</p>
-            </div>
+    <h1>My Career Timeline</h1>
+    <div class="timeline-container">
+        <div class="timeline">
+            <div class="year">2017</div>
+            <div class="year">2018</div>
+            <div class="year">2019</div>
+            <div class="year">2020</div>
+            <div class="year">2021</div>
+            <div class="year">2022</div>
+            <div class="year">2023</div>
+            <div class="year">2024</div>
         </div>
     </div>
 
