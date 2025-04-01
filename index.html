@@ -4,101 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Career Timeline</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Adding Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Adding custom styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding-left: 20px;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #ddd;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin: 20px 0;
+            position: relative;
+            width: 50%;
+            padding-left: 80px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ff5733;
+            left: -10px;
+            top: 10px;
+            box-shadow: 0 0 0 5px white;
+        }
+
+        .icon {
+            font-size: 24px;
+            color: #ff5733;
+            position: absolute;
+            left: -60px;
+            top: 10px;
+        }
+
+        .content {
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 85%;
+        }
+
+        .content h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .content p {
+            color: #555;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 50%;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 30px;
+            }
+
+            .timeline-item:nth-child(odd) {
+                left: 0%;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="timeline-container">
+
+    <header>
         <h1>My Career Timeline</h1>
-        
-        <div class="timeline">
-            <!-- Timeline Section for 2017 -->
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/academia-icon.png" alt="Academia">
-                </div>
-                <div class="timeline-content">
-                    <h3>2017</h3>
-                    <p>Started B.Tech (GITAM)</p>
-                </div>
-            </div>
+    </header>
 
-            <!-- Timeline Section for 2018 -->
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/internship-icon.png" alt="Internship">
-                </div>
-                <div class="timeline-content">
-                    <h3>2018</h3>
-                    <p>Internship at Red Solar</p>
-                </div>
+    <section class="timeline">
+        <!-- Event 1: Graduation -->
+        <div class="timeline-item">
+            <div class="icon">
+                <i class="fas fa-graduation-cap"></i> <!-- Graduation Icon -->
             </div>
-
-            <!-- Timeline Section for 2019 -->
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/startup-icon.png" alt="Startup">
-                </div>
-                <div class="timeline-content">
-                    <h3>2019</h3>
-                    <p>Founded Wendlo</p>
-                </div>
-            </div>
-
-            <!-- Timeline Section for 2020 -->
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/graduation-icon.png" alt="Graduation">
-                </div>
-                <div class="timeline-content">
-                    <h3>2020</h3>
-                    <p>Graduated from B.Tech (GITAM)</p>
-                </div>
-            </div>
-
-            <!-- Timeline Section for 2021 -->
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/research-icon.png" alt="Research">
-                </div>
-                <div class="timeline-content">
-                    <h3>2021</h3>
-                    <p>Research Intern at IIT Bhilai</p>
-                </div>
-            </div>
-
-            <!-- Timeline Section for 2022 -->
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/research-assistant-icon.png" alt="Research Assistant">
-                </div>
-                <div class="timeline-content">
-                    <h3>2022</h3>
-                    <p>Research Assistant at IIT Palakkad</p>
-                </div>
-            </div>
-
-            <!-- Timeline Section for 2023 -->
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/internship-icon.png" alt="Internship">
-                </div>
-                <div class="timeline-content">
-                    <h3>2023</h3>
-                    <p>Research Intern at IIIT Nagpur</p>
-                </div>
-            </div>
-
-            <!-- Timeline Section for 2024 -->
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/research-assistant-icon.png" alt="Research Assistant">
-                </div>
-                <div class="timeline-content">
-                    <h3>2024</h3>
-                    <p>Research Assistant at IIT Ropar</p>
-                </div>
+            <div class="content">
+                <h3>2020 - Graduated</h3>
+                <p>Graduated with a B.Tech in Computer Science from GITAM University.</p>
             </div>
         </div>
-    </div>
+
+        <!-- Event 2: Research Intern at IIT Bhilai -->
+        <div class="timeline-item">
+            <div class="icon">
+                <i class="fas fa-flask"></i> <!-- Research Icon -->
+            </div>
+            <div class="content">
+                <h3>2021 - Research Intern at IIT Bhilai</h3>
+                <p>Worked as a research intern focusing on AI and Machine Learning under the supervision of esteemed professors.</p>
+            </div>
+        </div>
+
+        <!-- Event 3: Research Assistant at IIT Palakkad -->
+        <div class="timeline-item">
+            <div class="icon">
+                <i class="fas fa-flask"></i> <!-- Research Icon -->
+            </div>
+            <div class="content">
+                <h3>2022 - Research Assistant at IIT Palakkad</h3>
+                <p>Assisted in various research projects, primarily focusing on data analytics and optimization techniques.</p>
+            </div>
+        </div>
+
+        <!-- Event 4: Research Intern at IIIT Nagpur -->
+        <div class="timeline-item">
+            <div class="icon">
+                <i class="fas fa-laptop-code"></i> <!-- Laptop/Technology Icon -->
+            </div>
+            <div class="content">
+                <h3>2023 - Research Intern at IIIT Nagpur</h3>
+                <p>Contributed to research in data-driven models and software development in the field of computational sciences.</p>
+            </div>
+        </div>
+
+        <!-- Event 5: Research Assistant at IIT Ropar -->
+        <div class="timeline-item">
+            <div class="icon">
+                <i class="fas fa-flask"></i> <!-- Research Icon -->
+            </div>
+            <div class="content">
+                <h3>2024 - Research Assistant at IIT Ropar</h3>
+                <p>Currently working as a research assistant, developing new methods in AI and optimizing machine learning algorithms.</p>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
