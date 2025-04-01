@@ -39,8 +39,8 @@
     </div>
     <script>
         const data = [
-            { year: 2017, event: "Internship at Red Solar", category: "Academia", link: "#internship-2017" },
-            { year: 2018, event: "Founded Wendlo", category: "Academia", link: "#wendlo" },
+            { year: 2017, event: "Internship at Red Solar", category: "Industry", link: "#internship-2017" },
+            { year: 2018, event: "Founded Wendlo", category: "Industry", link: "#wendlo" },
             { year: 2019, event: "Industry Experience (Incor)", category: "Industry", link: "#incor" },
             { year: 2020, event: "Graduated B.Tech (GITAM)", category: "Academia", link: "#graduation" },
             { year: 2021, event: "Research Intern (IIT Bhilai)", category: "Research", link: "#iit-bhilai" },
