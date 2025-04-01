@@ -7,101 +7,111 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
             text-align: center;
-            padding: 20px;
+        }
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0;
         }
         .timeline {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            width: 80%;
+            position: relative;
             align-items: center;
-            position: relative;
-            margin-top: 50px;
         }
-        .event {
-            position: relative;
+        .timeline-item {
             text-align: center;
-            margin: 20px;
+            position: relative;
+            flex: 1;
         }
-        .event-icon {
-            width: 50px;
-            height: 50px;
-        }
-        .event-year {
+        .icon {
+            width: 40px;
+            height: 40px;
             background-color: #007bff;
-            color: white;
-            padding: 10px;
-            border-radius: 25px;
-            font-weight: bold;
-            display: inline-block;
-            width: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
         }
-        .event-description {
+        .content {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #007bff;
+            display: inline-block;
+            min-width: 80px;
+        }
+        .designation {
             margin-top: 5px;
             font-size: 14px;
+            font-weight: bold;
         }
-        .timeline-line {
+        .connector {
             position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 5px;
+            height: 4px;
             background-color: #007bff;
+            width: 100%;
+            top: 50%;
             z-index: -1;
         }
     </style>
 </head>
 <body>
-    <h2>My Career Timeline</h2>
-    <div class="timeline">
-        <div class="timeline-line"></div>
-        
-        <div class="event">
-            <img src="internship.png" class="event-icon" alt="Internship">
-            <div class="event-year">2017</div>
-            <div class="event-description">Internship at Red Solar</div>
-        </div>
-        
-        <div class="event">
-            <img src="cofounder.png" class="event-icon" alt="Co-Founder">
-            <div class="event-year">2018</div>
-            <div class="event-description">Co-Founder, Wendlo</div>
-        </div>
-        
-        <div class="event">
-            <img src="industry.png" class="event-icon" alt="Industry">
-            <div class="event-year">2019</div>
-            <div class="event-description">Industry Experience, Incor</div>
-        </div>
-        
-        <div class="event">
-            <img src="graduation.png" class="event-icon" alt="Graduation">
-            <div class="event-year">2020</div>
-            <div class="event-description">Graduated, B.Tech</div>
-        </div>
-        
-        <div class="event">
-            <img src="research.png" class="event-icon" alt="Research">
-            <div class="event-year">2021</div>
-            <div class="event-description">Research Intern, IIT Bhilai</div>
-        </div>
-        
-        <div class="event">
-            <img src="research.png" class="event-icon" alt="Research">
-            <div class="event-year">2022</div>
-            <div class="event-description">Research Assistant, IIT Palakkad</div>
-        </div>
-        
-        <div class="event">
-            <img src="research.png" class="event-icon" alt="Research">
-            <div class="event-year">2023</div>
-            <div class="event-description">Research Intern, IIIT Nagpur</div>
-        </div>
-        
-        <div class="event">
-            <img src="research.png" class="event-icon" alt="Research">
-            <div class="event-year">2024</div>
-            <div class="event-description">Research Assistant, IIT Ropar</div>
+
+    <h1>My Career Timeline</h1>
+    <div class="timeline-container">
+        <div class="timeline">
+            <div class="connector"></div>
+            
+            <div class="timeline-item">
+                <div class="icon">📚</div>
+                <div class="content">2017</div>
+                <div class="designation">Internship - Red Start</div>
+            </div>
+            <div class="timeline-item">
+                <div class="icon">🚀</div>
+                <div class="content">2018</div>
+                <div class="designation">Co-Founder - Wendlo</div>
+            </div>
+            <div class="timeline-item">
+                <div class="icon">💼</div>
+                <div class="content">2019</div>
+                <div class="designation">Software Engineer - TechCorp</div>
+            </div>
+            <div class="timeline-item">
+                <div class="icon">🎓</div>
+                <div class="content">2020</div>
+                <div class="designation">Graduated - University</div>
+            </div>
+            <div class="timeline-item">
+                <div class="icon">⚙️</div>
+                <div class="content">2021</div>
+                <div class="designation">Systems Engineer - AlphaTech</div>
+            </div>
+            <div class="timeline-item">
+                <div class="icon">📊</div>
+                <div class="content">2022</div>
+                <div class="designation">Project Manager - BetaSolutions</div>
+            </div>
+            <div class="timeline-item">
+                <div class="icon">🌍</div>
+                <div class="content">2023</div>
+                <div class="designation">Global Lead - Omega Innovations</div>
+            </div>
+            <div class="timeline-item">
+                <div class="icon">🏆</div>
+                <div class="content">2024</div>
+                <div class="designation">Director - Future Enterprises</div>
+            </div>
         </div>
     </div>
+
 </body>
 </html>
