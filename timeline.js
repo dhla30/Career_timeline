@@ -51,7 +51,7 @@ svg.selectAll("circle")
     .on("mouseout", () => tooltip.style("visibility", "hidden"))
     .on("click", (event, d) => window.location.href = d.link);
 
-// Add custom icons or labels for events
+// Add event labels
 svg.selectAll("text")
     .data(data)
     .enter()
