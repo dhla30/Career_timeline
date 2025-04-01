@@ -4,53 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Career Timeline</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .timeline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: 50px;
+        }
+        .event {
+            position: relative;
+            text-align: center;
+            margin: 20px;
+        }
+        .event-icon {
+            width: 50px;
+            height: 50px;
+        }
+        .event-year {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            width: 80px;
+        }
+        .event-description {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #007bff;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
-    <h1>My Career Timeline</h1>
-    <div class="timeline-container">
-        <div class="timeline">
-            <div class="event">
-                <i class="fas fa-briefcase"></i>
-                <div class="oval">2017</div>
-                <p>Internship at Red Solar</p>
-            </div>
-            <div class="event">
-                <i class="fas fa-lightbulb"></i>
-                <div class="oval">2018</div>
-                <p>Co-founder of Wendlo</p>
-            </div>
-            <div class="event">
-                <i class="fas fa-industry"></i>
-                <div class="oval">2019</div>
-                <p>Industry Experience (Incor)</p>
-            </div>
-            <div class="event">
-                <i class="fas fa-graduation-cap"></i>
-                <div class="oval">2020</div>
-                <p>Graduated B.Tech</p>
-            </div>
-            <div class="event">
-                <i class="fas fa-flask"></i>
-                <div class="oval">2021</div>
-                <p>Research Intern at IIT Bhilai</p>
-            </div>
-            <div class="event">
-                <i class="fas fa-microscope"></i>
-                <div class="oval">2022</div>
-                <p>Research Assistant at IIT Palakkad</p>
-            </div>
-            <div class="event">
-                <i class="fas fa-laptop-code"></i>
-                <div class="oval">2023</div>
-                <p>Research Intern at IIIT Nagpur</p>
-            </div>
-            <div class="event">
-                <i class="fas fa-chalkboard-teacher"></i>
-                <div class="oval">2024</div>
-                <p>Research Assistant at IIT Ropar</p>
-            </div>
+    <h2>My Career Timeline</h2>
+    <div class="timeline">
+        <div class="timeline-line"></div>
+        
+        <div class="event">
+            <img src="internship.png" class="event-icon" alt="Internship">
+            <div class="event-year">2017</div>
+            <div class="event-description">Internship at Red Solar</div>
+        </div>
+        
+        <div class="event">
+            <img src="cofounder.png" class="event-icon" alt="Co-Founder">
+            <div class="event-year">2018</div>
+            <div class="event-description">Co-Founder, Wendlo</div>
+        </div>
+        
+        <div class="event">
+            <img src="industry.png" class="event-icon" alt="Industry">
+            <div class="event-year">2019</div>
+            <div class="event-description">Industry Experience, Incor</div>
+        </div>
+        
+        <div class="event">
+            <img src="graduation.png" class="event-icon" alt="Graduation">
+            <div class="event-year">2020</div>
+            <div class="event-description">Graduated, B.Tech</div>
+        </div>
+        
+        <div class="event">
+            <img src="research.png" class="event-icon" alt="Research">
+            <div class="event-year">2021</div>
+            <div class="event-description">Research Intern, IIT Bhilai</div>
+        </div>
+        
+        <div class="event">
+            <img src="research.png" class="event-icon" alt="Research">
+            <div class="event-year">2022</div>
+            <div class="event-description">Research Assistant, IIT Palakkad</div>
+        </div>
+        
+        <div class="event">
+            <img src="research.png" class="event-icon" alt="Research">
+            <div class="event-year">2023</div>
+            <div class="event-description">Research Intern, IIIT Nagpur</div>
+        </div>
+        
+        <div class="event">
+            <img src="research.png" class="event-icon" alt="Research">
+            <div class="event-year">2024</div>
+            <div class="event-description">Research Assistant, IIT Ropar</div>
         </div>
     </div>
 </body>
