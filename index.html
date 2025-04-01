@@ -4,120 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Career Timeline</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        .timeline-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 0;
-        }
-        .timeline {
-            position: relative;
-            width: 60%;
-        }
-        .timeline::before {
-            content: "";
-            position: absolute;
-            width: 4px;
-            background-color: #007bff;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .timeline-item {
-            position: relative;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-        }
-        .timeline-item:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
-        .content {
-            width: 45%;
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            border: 2px solid #007bff;
-            position: relative;
-        }
-        .content::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
-            background-color: #007bff;
-            border-radius: 50%;
-            left: -10px;
-        }
-        .timeline-item:nth-child(odd) .content::before {
-            left: unset;
-            right: -10px;
-        }
-        .year {
-            font-size: 20px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
     <h1>My Career Timeline</h1>
     <div class="timeline-container">
         <div class="timeline">
-            <div class="timeline-item">
-                <div class="content">
-                    <div class="year">2017</div>
-                </div>
+            <div class="event">
+                <i class="fas fa-briefcase"></i>
+                <div class="oval">2017</div>
+                <p>Internship at Red Solar</p>
             </div>
-            <div class="timeline-item">
-                <div class="content">
-                    <div class="year">2018</div>
-                </div>
+            <div class="event">
+                <i class="fas fa-lightbulb"></i>
+                <div class="oval">2018</div>
+                <p>Co-founder of Wendlo</p>
             </div>
-            <div class="timeline-item">
-                <div class="content">
-                    <div class="year">2019</div>
-                </div>
+            <div class="event">
+                <i class="fas fa-industry"></i>
+                <div class="oval">2019</div>
+                <p>Industry Experience (Incor)</p>
             </div>
-            <div class="timeline-item">
-                <div class="content">
-                    <div class="year">2020</div>
-                </div>
+            <div class="event">
+                <i class="fas fa-graduation-cap"></i>
+                <div class="oval">2020</div>
+                <p>Graduated B.Tech</p>
             </div>
-            <div class="timeline-item">
-                <div class="content">
-                    <div class="year">2021</div>
-                </div>
+            <div class="event">
+                <i class="fas fa-flask"></i>
+                <div class="oval">2021</div>
+                <p>Research Intern at IIT Bhilai</p>
             </div>
-            <div class="timeline-item">
-                <div class="content">
-                    <div class="year">2022</div>
-                </div>
+            <div class="event">
+                <i class="fas fa-microscope"></i>
+                <div class="oval">2022</div>
+                <p>Research Assistant at IIT Palakkad</p>
             </div>
-            <div class="timeline-item">
-                <div class="content">
-                    <div class="year">2023</div>
-                </div>
+            <div class="event">
+                <i class="fas fa-laptop-code"></i>
+                <div class="oval">2023</div>
+                <p>Research Intern at IIIT Nagpur</p>
             </div>
-            <div class="timeline-item">
-                <div class="content">
-                    <div class="year">2024</div>
-                </div>
+            <div class="event">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <div class="oval">2024</div>
+                <p>Research Assistant at IIT Ropar</p>
             </div>
         </div>
     </div>
-
 </body>
 </html>
