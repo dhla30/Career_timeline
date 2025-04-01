@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Timeline</title>
+    <title>My Career Timeline</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>My Career Timeline</h1>
-    <!-- Timeline SVG container -->
-    <svg class="timeline"></svg>
-    <!-- Tooltip for hover effect -->
-    <div class="tooltip" style="position: absolute; display: none; background: white; padding: 5px; border: 1px solid black;"></div>
+    <div id="timeline-container">
+        <!-- This is where the D3 timeline will be drawn -->
+        <svg class="timeline"></svg>
+        <!-- Tooltip will appear on hover -->
+        <div class="tooltip"></div>
+    </div>
 
-    <!-- D3.js and timeline.js scripts -->
-    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="timeline.js"></script>
 </body>
 </html>
-
