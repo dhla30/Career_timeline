@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f7f7f7;
             text-align: center;
         }
 
@@ -18,13 +18,14 @@
             justify-content: center;
             align-items: center;
             padding: 50px 0;
-            overflow-x: auto;
+            flex-wrap: wrap; /* Allows items to adjust and fit on the screen */
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
 
         .timeline {
             display: flex;
-            justify-content: space-evenly;
-            width: max-content;
+            justify-content: space-between;
+            width: 100%;
             position: relative;
             padding: 10px;
         }
@@ -33,7 +34,7 @@
             content: "";
             position: absolute;
             width: 4px;
-            background-color: #007bff;
+            background-color: #34bfa3; /* Soft teal */
             top: 50%;
             bottom: 50%;
             left: 0;
@@ -45,13 +46,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 0 20px;
+            margin: 0 15px; /* Adjusted for better spacing */
+            flex-basis: 20%; /* Ensures the items are responsive and fit well */
         }
 
         .oval {
-            width: 100px;
-            height: 100px;
-            background-color: #007bff;
+            width: 90px;
+            height: 90px;
+            background-color: #34bfa3; /* Soft teal */
             border-radius: 50%;
             margin-bottom: 10px;
             position: relative;
@@ -69,14 +71,15 @@
 
         .role {
             font-size: 18px;
-            font-weight: 500;
-            color: #4CAF50; /* A new color for roles */
+            font-weight: bold;
+            color: #333;
         }
 
         .company {
             font-size: 16px;
             font-weight: 300;
-            color: #333; /* Slightly darker color for company name */
+            font-style: italic;
+            color: #777;
         }
 
     </style>
@@ -127,7 +130,7 @@
                 <div class="role">Graduated</div>
                 <div class="company">University</div>
             </div>
-            <!-- 2020-2022-->
+            <!-- 2020-2022 -->
             <div class="timeline-item">
                 <div class="oval">
                     <div class="oval-text">2020</div>
@@ -156,7 +159,7 @@
                 <div class="oval">
                     <div class="oval-text">2023</div>
                 </div>
-                <div class="role">Research Assiatant</div>
+                <div class="role">Research Assistant</div>
                 <div class="company">IIIT Nagpur</div>
             </div>
             <!-- 2024 -->
