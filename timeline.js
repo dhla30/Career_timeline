@@ -17,9 +17,9 @@ const svg = d3.select(".timeline"),
 
 svg.attr("width", width).attr("height", height);
 
-// Scales
+// Scale for positioning the events on the x-axis (years)
 const xScale = d3.scaleLinear()
-    .domain([2017, 2024])  // Adjusted to match your years
+    .domain([2017, 2024])  // Start from 2017, end at 2024
     .range([margin.left, width - margin.right]);
 
 const xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
@@ -28,11 +28,9 @@ svg.append("g")
     .call(xAxis);
 
 // Tooltip setup
-const tooltip = d3.select(".tooltip")
-    .style("position", "absolute")
-    .style("visibility", "hidden");
+const tooltip = d3.select(".tooltip");
 
-// Draw interactive events
+// Draw circles for each event
 svg.selectAll("circle")
     .data(data)
     .enter()
@@ -43,28 +41,28 @@ svg.selectAll("circle")
     .attr("fill", d => d.category === "Academia" ? "blue" : d.category === "Industry" ? "green" : "red")
     .attr("class", "event")
     .on("mouseover", (event, d) => {
-        tooltip.style("visibility", "visible")
+        tooltip.style("display", "block")
                .style("left", event.pageX + "px")
                .style("top", event.pageY - 30 + "px")
                .text(d.event);
     })
-    .on("mouseout", () => tooltip.style("visibility", "hidden"))
+    .on("mouseout", () => tooltip.style("display", "none"))
     .on("click", (event, d) => window.location.href = d.link);
 
-// Add event labels
+// Add text labels for events
 svg.selectAll("text")
     .data(data)
     .enter()
     .append("text")
     .attr("x", d => xScale(d.year))
-    .attr("y", height / 2 - 15)
+    .attr("y", height / 2 - 20)
     .attr("text-anchor", "middle")
     .attr("font-size", "14px")
     .text(d => d.event)
     .style("font-family", "Arial, sans-serif")
     .style("fill", "black");
 
-// Adding start and end markers
+// Add start and end markers
 svg.append("line")
     .attr("x1", margin.left)
     .attr("y1", height / 2 + 30)
