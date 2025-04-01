@@ -7,111 +7,119 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
             text-align: center;
+            margin: 0;
+            padding: 20px;
         }
         .timeline-container {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            padding: 50px 0;
+            flex-direction: column;
         }
         .timeline {
             display: flex;
             justify-content: space-between;
-            width: 80%;
-            position: relative;
             align-items: center;
+            width: 90%;
+            position: relative;
+            margin-top: 50px;
+        }
+        .timeline::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: #007bff;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: -1;
         }
         .timeline-item {
             text-align: center;
             position: relative;
-            flex: 1;
+            width: 100px;
         }
         .icon {
-            width: 40px;
-            height: 40px;
-            background-color: #007bff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
+            font-size: 30px;
+            color: #007bff;
         }
-        .content {
+        .oval {
             background: white;
-            padding: 15px;
-            border-radius: 8px;
+            border-radius: 50px;
+            padding: 15px 20px;
             border: 2px solid #007bff;
             display: inline-block;
-            min-width: 80px;
+            font-weight: bold;
+            font-size: 16px;
         }
-        .designation {
-            margin-top: 5px;
+        .role {
             font-size: 14px;
             font-weight: bold;
+            margin-bottom: 5px;
         }
-        .connector {
-            position: absolute;
-            height: 4px;
-            background-color: #007bff;
-            width: 100%;
-            top: 50%;
-            z-index: -1;
+        .company {
+            font-size: 14px;
+            color: gray;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
-
     <h1>My Career Timeline</h1>
     <div class="timeline-container">
         <div class="timeline">
-            <div class="connector"></div>
-            
             <div class="timeline-item">
-                <div class="icon">📚</div>
-                <div class="content">2017</div>
-                <div class="designation">Internship - Red Start</div>
+                <div class="role">Intern</div>
+                <div class="icon">📌</div>
+                <div class="oval">2017</div>
+                <div class="company">Red Solar</div>
             </div>
             <div class="timeline-item">
+                <div class="role">Co-Founder</div>
                 <div class="icon">🚀</div>
-                <div class="content">2018</div>
-                <div class="designation">Co-Founder - Wendlo</div>
+                <div class="oval">2018</div>
+                <div class="company">Wendlo</div>
             </div>
             <div class="timeline-item">
-                <div class="icon">💼</div>
-                <div class="content">2019</div>
-                <div class="designation">Software Engineer - TechCorp</div>
+                <div class="role">Software Engineer</div>
+                <div class="icon">💻</div>
+                <div class="oval">2019</div>
+                <div class="company">XYZ Corp</div>
             </div>
             <div class="timeline-item">
+                <div class="role">Graduated</div>
                 <div class="icon">🎓</div>
-                <div class="content">2020</div>
-                <div class="designation">Graduated - University</div>
+                <div class="oval">2020</div>
+                <div class="company">GITAM</div>
             </div>
             <div class="timeline-item">
-                <div class="icon">⚙️</div>
-                <div class="content">2021</div>
-                <div class="designation">Systems Engineer - AlphaTech</div>
-            </div>
-            <div class="timeline-item">
+                <div class="role">Analyst</div>
                 <div class="icon">📊</div>
-                <div class="content">2022</div>
-                <div class="designation">Project Manager - BetaSolutions</div>
+                <div class="oval">2021</div>
+                <div class="company">ABC Analytics</div>
             </div>
             <div class="timeline-item">
-                <div class="icon">🌍</div>
-                <div class="content">2023</div>
-                <div class="designation">Global Lead - Omega Innovations</div>
+                <div class="role">Manager</div>
+                <div class="icon">🏢</div>
+                <div class="oval">2022</div>
+                <div class="company">LMN Ltd</div>
             </div>
             <div class="timeline-item">
-                <div class="icon">🏆</div>
-                <div class="content">2024</div>
-                <div class="designation">Director - Future Enterprises</div>
+                <div class="role">Lead Developer</div>
+                <div class="icon">🔧</div>
+                <div class="oval">2023</div>
+                <div class="company">DEF Tech</div>
+            </div>
+            <div class="timeline-item">
+                <div class="role">Senior Engineer</div>
+                <div class="icon">🚀</div>
+                <div class="oval">2024</div>
+                <div class="company">XYZ Innovations</div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
