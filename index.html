@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Timeline</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .timeline { width: 100%; height: 500px; }
-        .event { cursor: pointer; }
-        .tooltip { position: absolute; padding: 8px; background: white; border: 1px solid black; display: none; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>My Career Timeline</h1>
+    <!-- Timeline SVG container -->
     <svg class="timeline"></svg>
-    <div class="tooltip"></div>
+    <!-- Tooltip for hover effect -->
+    <div class="tooltip" style="position: absolute; display: none; background: white; padding: 5px; border: 1px solid black;"></div>
+
+    <!-- D3.js and timeline.js scripts -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="timeline.js"></script>
 </body>
 </html>
+
