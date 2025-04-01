@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f7f7f7;
             text-align: center;
         }
 
@@ -18,13 +18,14 @@
             justify-content: center;
             align-items: center;
             padding: 50px 0;
-            overflow-x: auto; /* Allows horizontal scrolling if needed */
+            flex-wrap: wrap; /* This allows the items to adjust to the screen width */
+            overflow-x: hidden; /* Removes horizontal scrolling */
         }
 
         .timeline {
             display: flex;
-            justify-content: space-evenly;
-            width: max-content; /* Allows content to overflow horizontally */
+            justify-content: space-between;
+            width: 100%;
             position: relative;
             padding: 10px;
         }
@@ -33,7 +34,7 @@
             content: "";
             position: absolute;
             width: 4px;
-            background-color: #007bff;
+            background-color: #34bfa3; /* Soft teal */
             top: 50%;
             bottom: 50%;
             left: 0;
@@ -45,13 +46,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 0 30px; /* Adjusted for better spacing */
+            margin: 0 15px; /* Adjusted for better spacing */
+            flex-basis: 20%; /* Ensures the items are responsive and fit well */
         }
 
         .oval {
-            width: 100px;
-            height: 100px;
-            background-color: #6c757d; /* Changed to a soft gray color */
+            width: 90px;
+            height: 90px;
+            background-color: #34bfa3; /* Soft teal color */
             border-radius: 50%;
             margin-bottom: 10px;
             position: relative;
@@ -69,9 +71,9 @@
 
         .icon {
             font-size: 30px;
-            color: #6c757d; /* Same color as the oval for a uniform look */
+            color: #ffffff; /* White icon for better contrast */
             position: absolute;
-            top: -40px;
+            top: -35px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -79,13 +81,13 @@
         .role {
             font-size: 18px;
             font-weight: 500;
-            color: #6f42c1; /* Soft purple for role */
+            color: #2e3b4e; /* Dark grayish-blue for role */
         }
 
         .company {
             font-size: 16px;
             font-weight: 300;
-            color: #555; /* Lighter color for company name */
+            color: #5a636e; /* Soft gray for company name */
         }
 
     </style>
