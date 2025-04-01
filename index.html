@@ -7,119 +7,215 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
             text-align: center;
-            margin: 0;
-            padding: 20px;
         }
+
         .timeline-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-        }
-        .timeline {
-            display: flex;
-            justify-content: space-between;
             align-items: center;
-            width: 90%;
-            position: relative;
-            margin-top: 50px;
+            padding: 50px 0;
         }
+
+        .timeline {
+            position: relative;
+            width: 70%;
+        }
+
         .timeline::before {
             content: "";
             position: absolute;
-            width: 100%;
-            height: 4px;
+            width: 4px;
             background-color: #007bff;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
+
         .timeline-item {
-            text-align: center;
             position: relative;
-            width: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
         }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .content {
+            width: 45%;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #007bff;
+            position: relative;
+        }
+
+        .content::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 25px;
+            height: 25px;
+            background-color: #007bff;
+            border-radius: 50%;
+            left: -12px;
+        }
+
+        .timeline-item:nth-child(odd) .content::before {
+            left: unset;
+            right: -12px;
+        }
+
+        .year {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .role {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .company {
+            font-size: 16px;
+            font-weight: 300;
+        }
+
         .icon {
             font-size: 30px;
             color: #007bff;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
         }
+
+        /* Timeline styling for the ovals */
         .oval {
-            background: white;
-            border-radius: 50px;
-            padding: 15px 20px;
-            border: 2px solid #007bff;
-            display: inline-block;
-            font-weight: bold;
+            width: 100px;
+            height: 100px;
+            background-color: #007bff;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .oval-text {
             font-size: 16px;
-        }
-        .role {
-            font-size: 14px;
+            color: white;
             font-weight: bold;
-            margin-bottom: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
-        .company {
-            font-size: 14px;
-            color: gray;
-            margin-top: 5px;
-        }
+
     </style>
 </head>
 <body>
+
     <h1>My Career Timeline</h1>
+
     <div class="timeline-container">
         <div class="timeline">
+            <!-- 2017 -->
             <div class="timeline-item">
-                <div class="role">Intern</div>
-                <div class="icon">📌</div>
-                <div class="oval">2017</div>
-                <div class="company">Red Solar</div>
+                <div class="content">
+                    <div class="oval">
+                        <div class="oval-text">2017</div>
+                    </div>
+                    <div class="icon">🎓</div>
+                    <div class="role">Internship</div>
+                    <div class="company">Red Solar</div>
+                </div>
             </div>
+            <!-- 2018 -->
             <div class="timeline-item">
-                <div class="role">Co-Founder</div>
-                <div class="icon">🚀</div>
-                <div class="oval">2018</div>
-                <div class="company">Wendlo</div>
+                <div class="content">
+                    <div class="oval">
+                        <div class="oval-text">2018</div>
+                    </div>
+                    <div class="icon">💡</div>
+                    <div class="role">Co-Founder</div>
+                    <div class="company">Wendlo</div>
+                </div>
             </div>
+            <!-- 2019 -->
             <div class="timeline-item">
-                <div class="role">Software Engineer</div>
-                <div class="icon">💻</div>
-                <div class="oval">2019</div>
-                <div class="company">XYZ Corp</div>
+                <div class="content">
+                    <div class="oval">
+                        <div class="oval-text">2019</div>
+                    </div>
+                    <div class="icon">🏢</div>
+                    <div class="role">Industry Experience</div>
+                    <div class="company">Incor</div>
+                </div>
             </div>
+            <!-- 2020 -->
             <div class="timeline-item">
-                <div class="role">Graduated</div>
-                <div class="icon">🎓</div>
-                <div class="oval">2020</div>
-                <div class="company">GITAM</div>
+                <div class="content">
+                    <div class="oval">
+                        <div class="oval-text">2020</div>
+                    </div>
+                    <div class="icon">💼</div>
+                    <div class="role">Graduated</div>
+                    <div class="company">GITAM University</div>
+                </div>
             </div>
+            <!-- 2021 -->
             <div class="timeline-item">
-                <div class="role">Analyst</div>
-                <div class="icon">📊</div>
-                <div class="oval">2021</div>
-                <div class="company">ABC Analytics</div>
+                <div class="content">
+                    <div class="oval">
+                        <div class="oval-text">2021</div>
+                    </div>
+                    <div class="icon">🔬</div>
+                    <div class="role">Research Intern</div>
+                    <div class="company">IIT Bhilai</div>
+                </div>
             </div>
+            <!-- 2022 -->
             <div class="timeline-item">
-                <div class="role">Manager</div>
-                <div class="icon">🏢</div>
-                <div class="oval">2022</div>
-                <div class="company">LMN Ltd</div>
+                <div class="content">
+                    <div class="oval">
+                        <div class="oval-text">2022</div>
+                    </div>
+                    <div class="icon">🔬</div>
+                    <div class="role">Research Assistant</div>
+                    <div class="company">IIT Palakkad</div>
+                </div>
             </div>
+            <!-- 2023 -->
             <div class="timeline-item">
-                <div class="role">Lead Developer</div>
-                <div class="icon">🔧</div>
-                <div class="oval">2023</div>
-                <div class="company">DEF Tech</div>
+                <div class="content">
+                    <div class="oval">
+                        <div class="oval-text">2023</div>
+                    </div>
+                    <div class="icon">🔬</div>
+                    <div class="role">Research Intern</div>
+                    <div class="company">IIIT Nagpur</div>
+                </div>
             </div>
+            <!-- 2024 -->
             <div class="timeline-item">
-                <div class="role">Senior Engineer</div>
-                <div class="icon">🚀</div>
-                <div class="oval">2024</div>
-                <div class="company">XYZ Innovations</div>
+                <div class="content">
+                    <div class="oval">
+                        <div class="oval-text">2024</div>
+                    </div>
+                    <div class="icon">🔬</div>
+                    <div class="role">Research Assistant</div>
+                    <div class="company">IIT Ropar</div>
+                </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>
