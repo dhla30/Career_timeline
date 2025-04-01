@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+#timeline-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
